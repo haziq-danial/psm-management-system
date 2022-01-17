@@ -21,41 +21,41 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                    <div class="modal-body">
-                        <form action="{{ route('manage-inventory.store') }}" id="add-item-form" method="POST">
-                            @csrf
-                            <div class="form-group">
-                                <label>Item Name</label>
-                                <input type="text" name="name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Quantity</label>
-                                <input type="number" name="quantity" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Date Start</label>
-                                <div class="input-group date" id="date_start" data-target-input="nearest">
-                                    <input type="text" name="date_start" class="form-control datetimepicker-input" data-target="#date_start"/>
-                                    <div class="input-group-append" data-target="#date_start" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                    </div>
+                <div class="modal-body">
+                    <form action="{{ route('manage-inventory.store') }}" id="add-item-form" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label>Item Name</label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" name="quantity" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Date Start</label>
+                            <div class="input-group date" id="date_start" data-target-input="nearest">
+                                <input type="text" name="date_start" class="form-control datetimepicker-input" data-target="#date_start"/>
+                                <div class="input-group-append" data-target="#date_start" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label>Date End</label>
-                                <div class="input-group date" id="date_end" data-target-input="nearest">
-                                    <input type="text" name="date_end" class="form-control datetimepicker-input" data-target="#date_end"/>
-                                    <div class="input-group-append" data-target="#date_end" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Date End</label>
+                            <div class="input-group date" id="date_end" data-target-input="nearest">
+                                <input type="text" name="date_end" class="form-control datetimepicker-input" data-target="#date_end"/>
+                                <div class="input-group-append" data-target="#date_end" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="button" onclick="event.preventDefault(); document.getElementById('add-item-form').submit()" class="btn btn-primary">Submit</button>
-                    </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" onclick="event.preventDefault(); document.getElementById('add-item-form').submit()" class="btn btn-primary">Submit</button>
+                </div>
             </div>
         </div>
     </div>
@@ -81,6 +81,7 @@
             </div>
         </div>
     </section>
+
     <section class="content">
         <div class="card">
             <div class="card-header">
@@ -194,7 +195,6 @@
             $('#date_end').datetimepicker({
                 format: 'L'
             });
-
         });
     </script>
 @endsection

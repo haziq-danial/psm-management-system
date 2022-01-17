@@ -7,8 +7,6 @@
     @yield('stylesheet')
     <title>@yield('title')</title>
 
-    {{--    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">--}}
-    {{--    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css ') }}">--}}
 </head>
 <body>
     <div class="wrapper">
